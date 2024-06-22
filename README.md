@@ -1,2 +1,2 @@
-# HomePage
-Desenvolvimento do projeto
+# Landing Page
+Em desenvolvimento

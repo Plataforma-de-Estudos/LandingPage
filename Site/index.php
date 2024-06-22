@@ -6,6 +6,7 @@ require_once 'config/config.php';
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="PauloFreire.ai.ico" type="image/x-icon">
 
     <!-- Ajax -->
     <!-- <link rel="shortcut icon" href="NalinSports.ico" type="image/x-icon">
