@@ -1,51 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-bt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="PauloFreire.ai.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets\img\Imgs_Logo\PauloFreire.ai.ico" type="image/x-icon">
+    <title>PauloFreire</title>
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-
-<body>
-    <header>
-        <!-- Navbar -->
-    </header>
-    <main>
-        <!-- Home -->
-        <section class="home">
-
-        </section>
-
-        <!-- About -->
-        <section class="about">
-
-        </section>
-
-        <!-- Services -->
-        <section class="services">
-
-        </section>
-
-        <!-- Plans -->
-        <section class="plans">
-
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-
-    </footer>
-
     <script src="assets/js/script.js"></script>
 
     <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid" id="navbar-container">
+              <img src="assets\img\Imgs_Logo\pf_light_darkPurple.svg" style="width: 5%">
+              <a class="navbar-brand" href="#">PauloFreire.ai</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">PauloFreire.ai</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="conteudo-navbar">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" >Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Planos</a>
+                    </li>
+                    <li class="nav-item" id="Login">
+                        <button type="button" class="nav-link btn btn-outline-light " href="#">Fazer Login</button>
+                    </li>
+                    <li class="nav-item">
+                      <button type="button" class="nav-link btn" href="#">dark/light</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+  </header>
+
+  <main class="conteudo-main">
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="conteudo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusantium error tempora deserunt molestias ipsum odit id necessitatibus cum numquam, facere architecto a nemo quasi eius ducimus exercitationem dolor voluptate.
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="conteudo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui totam tempore exercitationem debitis eaque natus placeat earum cupiditate beatae esse, quam quaerat architecto saepe officiis quo culpa fuga alias! Expedita.
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services" id="services">
+            <div class="conteudo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At illo, doloremque officiis molestias eaque veritatis. Excepturi commodi soluta reiciendis, voluptates aliquam quam rem officiis ad similique, eligendi libero veritatis. Rerum?
+            </div>
+        </section>
+
+        <!-- Plans -->
+        <section class="plans" id="plans">
+            <div class="conteudo">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam fugiat provident, excepturi quod aliquid similique accusantium velit reiciendis. Recusandae placeat cum quia minima nostrum ab modi porro vel adipisci nulla.
+            </div>
+        </section>
+  </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div><p id="footer">Direitos Reservados</p></div>
+    </footer>
+  
 </body>
 
 </html>

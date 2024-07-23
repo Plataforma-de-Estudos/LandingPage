@@ -1,8 +1,121 @@
 @charset "UTF-8";
+html {
+    overflow-x: hidden;
+} 
 
-*{
-    margin: 0;
-    padding: 0;
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent ;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CONTEUDO */
+
+.conteudo{
+    background-color: transparent;
+    width: 96%;
+    height: 80%;
+    position: absolute;
+    margin-left: 2% !important;
+    margin-top: 8.5%;
+    margin-bottom: 0%;
+    outline: 1px solid black;
+}
+
+/* NAVBAR */
+
+#navbar-container {
+    border-bottom: 1px solid #000000;
+}
+
+#conteudo-navbar ul {
+    background-color: transparent;
+    margin-right: 0%;
+}
+
+#conteudo-navbar ul li {
+    background-color: transparent;
+    margin-right: 3%;
+    outline: 1px solid black;
+    line-height: normal;
+}
+
+#conteudo-navbar ul li#Login {
+    background-color: #a767ff;
+    margin-right: 3%;
+}
+
+#conteudo-navbar ul li:last-child {
+    background-color: #a767ff;
+    margin-right: 3%;
+}
+
+
+#navbar-container {
+    background-color: transparent;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+/* MAIN */
+
+
+
+/* HOME */
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background-color: #fcfcfc;
+    padding: 0;
+}
+
+/* ABOUT */
+
+.about {
+    height: 100vh;
+    width: 100%;
+    background-color: #a767ff;
+    padding: 0;
+}
+
+/* SERVICES */
+
+.services {
+    height: 100vh;
+    width: 100%;
+    background-color: #fcfcfc;
+    padding: 0;
+}
+
+/* PLANS */
+
+.plans {
+    height: 100vh;
+    width: 100%;
+    background-color: #a767ff;
+    padding: 0;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: grey;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+}
+
+p#footer {
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
 }
