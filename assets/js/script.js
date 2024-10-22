@@ -46,14 +46,76 @@ document.querySelector('.navbar-toggler').addEventListener('click', () => {
 
 
 /* Section SERVICE */
+function setTextService(qualCard) {
+  const label = document.getElementById('labelService');
+  const text = document.getElementById('textService');
+  const img = document.getElementById('imgDesc');
 
+  const content = document.getElementById('content');
+  const chatbot = document.getElementById('chatbot');
+  const agenda = document.getElementById('agenda');
+  const simulado = document.getElementById('simulated');
+
+  switch(qualCard) {
+    case 1:
+      content.style.width = "8vw";
+      chatbot.style.width = "6vw";
+      agenda.style.width = "5vw";
+      simulado.style.width = "5vw";
+
+      label.innerText = "Conteúdo Personalizado";
+      text.innerText = "Para proporcionar maior precisão em diversos conteúdos que serão cobrados nos vestibulares da ETEC e da FATEC, a equipe do PauloFreire.ai treinou o ChatGPT com fontes confiáveis.";
+
+      img.src = "assets/img/Imgs_Service/Img_Conteudo2.png";
+      break;
+
+    case 2:
+      content.style.width = "5vw";
+      chatbot.style.width = "9vw";
+      agenda.style.width = "5vw";
+      simulado.style.width = "5vw";
+
+      label.innerText = "ChatBot";
+      text.innerText = "A plataforma PauloFreire.ai utiliza bots personalizados com o nome de professores reais da ETEC São Mateus, para fazer uma homenagem a esses profissionais e para deixar a aula com esses bots mais afetiva para estudantes.";
+
+      img.src = "assets/img/Imgs_Service/Img_Chatbot2.png";
+      break;
+
+    case 3:
+      content.style.width = "5vw";
+      chatbot.style.width = "6vw";
+      agenda.style.width = "8vw";
+      simulado.style.width = "5vw";
+
+      label.innerText = "Agendas";
+      text.innerText = "Ao entrar na plataforma, o estudante poderá escolher um dos três períodos, 3, 6 ou 12 meses, para iniciar os estudos, ajustando o conteúdo ao tempo que o aluno pretende estudar para prestar o vestibular da ETEC ou da FATEC.";
+
+      img.src = "assets/img/Imgs_Service/Img_Agenda2.png";
+      break;
+
+    case 4:
+      content.style.width = "5vw";
+      chatbot.style.width = "6vw";
+      agenda.style.width = "5vw";
+      simulado.style.width = "6vw";
+
+      label.innerText = "Simulados";
+      text.innerText = "Uma das premissas importantes desse projeto é implementar a prática, por esta razão a plataforma conta com todos os simulados dos vestibulares da ETEC e FATEC, assim o aluno pode treinar o conteúdo e o tempo para o dia da prova.";
+
+      img.src = "assets/img/Imgs_Service/Img_Simulado2.png";
+      break;
+  }
+}
+setTextService(2);
 
 
 /* Section PLAN */
 function reloadPlans(width_screen){
   const plans = document.querySelector('.plan');
 
-  if(width_screen < 1000) {
+  let quantCards = Math.ceil(width_screen/600);
+
+  if(quantCards<=1) {
     plans.innerHTML = `
       <h1>Planos</h1>
       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
