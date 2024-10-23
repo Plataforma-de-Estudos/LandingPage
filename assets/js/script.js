@@ -1,4 +1,4 @@
-/* Drak mode */
+/* Dark mode */
 document.addEventListener('DOMContentLoaded', function() {
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
@@ -43,6 +43,19 @@ setInterval(() => {
 document.querySelector('.navbar-toggler').addEventListener('click', () => {
   document.querySelector('.navbar-toggler').classList.toggle('active');
 })
+
+
+/* Animation Scroll */
+const myObserver = new IntersectionObserver((e) => {
+  e.forEach((entry) => {
+    if(entry.isIntersecting) entry.target.classList.add('show-scroll');
+    else entry.target.classList.remove('show-scroll');
+  });
+});
+
+var elements = document.querySelectorAll('hidden-scroll');
+
+elements.forEach((e) => myObserver.observe(e));
 
 
 /* Section SERVICE */
@@ -113,7 +126,7 @@ setTextService(2);
 function reloadPlans(width_screen){
   const plans = document.querySelector('.plan');
 
-  let quantCards = Math.ceil(width_screen/600);
+  let quantCards = Math.ceil(width_screen/700);
 
   if(quantCards<=1) {
     plans.innerHTML = `
@@ -165,20 +178,20 @@ function reloadPlans(width_screen){
   } else {
     plans.innerHTML = `
       <h1>Planos</h1>
-      <div class="container-plans">
-        <div class="card-plan">
+      <div class="container-plans logos-scroll">
+        <div class="card-plan hidden-scroll">
           <p>FREE!</p>
           <p>R$0</p>
           <p>Start for free</p>
         </div>
 
-        <div class="card-plan">
+        <div class="card-plan hidden-scroll">
           <p>STANDARD</p>
           <p>R$2,00</p>
           <p>Start for standard</p>
         </div>
 
-        <div class="card-plan">
+        <div class="card-plan hidden-scroll">
           <p>PREMIUM</p>
           <p>R$4,00</p>
           <p>Start for premium</p>
@@ -186,6 +199,9 @@ function reloadPlans(width_screen){
       </div>
     `;
   }
+
+  elements = document.querySelectorAll('.hidden-scroll');
+  elements.forEach((e) => myObserver.observe(e));
 }
 reloadPlans(window.innerWidth, window.innerHeight);
 
