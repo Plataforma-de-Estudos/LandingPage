@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 :root {
-  --cor-roxa: #8C52FF !important;
-  --cor-branca: #FFFFFF !important;
-  --cor-preta: #31003B !important;
+  --back: #FFFFFF;
+  --text: #8C52FF;
+  --exception-back: #8C52FF;
+  --exception-text: #FFFFFF;
+}
 
-  --cor-em-modo-claro: #8C52FF !important;
-  --cor-em-modo-escuro: #FFFFFF !important;
-
-  --fundo-escuro: #31003B !important;
-  --fundo-claro: #FFFFFF !important;
+.darkmode:root {
+  --back: #31003B;
+  --text: #FFFFFF;
+  --exception-back: #FFFFFF;
+  --exception-text: #31003B;
 }
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   text-decoration: none;
   box-sizing: border-box;
   padding: 0;
@@ -24,41 +26,12 @@ html {
   font-size: 15px;
 }
 
-/* alternar em modo claro e escuro*/
 body {
-  background: var(--fundo-claro);
-  color: var(--cor-em-modo-claro);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-theme {
-  background: var(--cor-preta);
-}
-
-.fazerLogin.dark-theme,
-.info p.dark-theme,
-a.dark-theme,
-h1.dark-theme,
-.tituloLogo.dark-theme,
-.logo h2.dark-theme, 
-.nav-link.dark-theme,
-a.nav-link.linha.dark-theme,
-.h3.dark-theme {
-  color: var(--cor-em-modo-escuro) !important;
-}
-
-.offcanvas-body {
-  transition: none !important;
-}
-
-.offcanvas-body.dark-theme{
-  /* background: var(--fundo-escuro) !important; */
-}
-
-.exit-menu {
-  font-family: sans-serif;
-  font-size: 44px;
-  color: #31003B;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  /* background-image: linear-gradient(45deg, black, #31003B); */
+  background-color: var(--back);
 }
 
 
@@ -86,10 +59,6 @@ li.nav-item {
   transition: .5s ease-in-out;
 }
 
-.navbar-toggler.dark-theme span {
-  background: white;
-}
-
 .navbar-toggler.active span:nth-child(1) {
   transform: rotate(225deg);
   top: 8px;
@@ -104,66 +73,11 @@ li.nav-item {
   top: -9px;
 }
 
-
-.exit-menu.dark-theme{
-  color: white;
-}
-
-.navbar-wrapper.dark-theme{
-  background: var(--fundo-escuro) !important;
-}
-
-#navbar-fixed.dark-theme {
-  border-bottom: 5px solid var(--cor-em-modo-escuro);
-  /* background-color: transparent; */
-}
-button.fazerLogin.dark-theme {
-  border-color: var(--borda-modo-escuro) !important;
-}
-
-.registrar button.dark-theme {
-  color: var(--fundo-escuro);
-  background: var(--cor-em-modo-escuro);
-}
-
-.navbar.dark-theme {
-  background-color: var(--cor-preta) !important;
-}
-.registrar button:hover.dark-theme {
-  color: var(--cor-em-modo-escuro);
-  background: var(--fundo-escuro);
-  border-color: var(--borda-modo-escuro);
-}
-
-.bolaBotao.dark-theme {
-  background: var(--fundo-escuro) !important;
-}
-
-.registrar button:hover~.bolaBotao.dark-theme {
-  background: var(--cor-em-modo-escuro) !important;
-}
-
-.bolinhaDireita.dark-theme,
-.bolinhaEsquerda.dark-theme,
-.bolinhaMeio.dark-theme,
-.bolaoDireita.dark-theme,
-.bolaoEsquerda.dark-theme {
-  background: var(--cor-em-modo-escuro) !important;
-}
-
 .modal-backdrop {
   display: none;
 }
 
 /*----------------*/
-
-body {
-  width: 100%;
-  height: 100vh;
-
-  overflow-x: hidden;
-}
-
 p,
 h1,
 h2,
@@ -177,15 +91,18 @@ button {
   border: none;
 }
 
+.offcanvas-header, .offcanvas-body {
+  background-color: var(--back);
+}
+
 /*-----header-----*/
 #navbar-fixed {
-  border-bottom: 5px solid var(--cor-em-modo-claro);
+  border-bottom: 5px solid var(--exception-back);
   margin-bottom: 50px;
   position: fixed;
   top: 0;
   width: 90%;
   z-index: 999;
-  background-color: var(--cor-em-modo-escuro);
   padding-top: 20px;
   transition: background-color .3s, color .3s;
 }
@@ -193,12 +110,12 @@ button {
 header {
   display: flex;
   justify-content: center;
-  background-color: var(--fundo-claro);
+  background-color: var(--back);
 }
 
 .nav-link,
 header .navbar-brand {
-  color: var(--cor-em-modo-claro) !important;
+  color: var(--text) !important;
 }
 
 .logo {
@@ -210,7 +127,7 @@ header .navbar-brand {
 .logo h2 {
   margin-top: 30px;
   margin-bottom: 10px;
-  color: var(--cor-em-modo-claro);
+  color: var(--text);
 }
 
 .logo img {
@@ -220,6 +137,7 @@ header .navbar-brand {
 nav {
   display: flex;
   justify-content: space-between;
+  background-color: var(--back);
 }
 
 .nav-link {
@@ -239,8 +157,13 @@ li {
 }
 
 li a {
-  color: var(--cor-em-modo-claro);
+  color: var(--text);
   font-size: 3rem;
+  text-align: center;
+}
+
+li a:hover {
+  font-weight: bold;
 }
 
 .fazerLogin {
@@ -249,9 +172,14 @@ li a {
   font-weight: bold;
   padding: 7px 15px;
   cursor: pointer;
-  border: solid 2px var(--cor-em-modo-claro);
-  background: var();
-  color: var(--cor-em-modo-claro);
+  border: solid 2px var(--exception-back);
+  color: var(--text);
+}
+
+.fazerLogin:hover {
+  background-color: var(--exception-back);
+  border: solid 2px var(--exception-back);
+  color: var(--exception-text);
 }
 
 #theme-toggle {
@@ -266,16 +194,6 @@ li a {
 .container-fluid {
   padding-right: 0 !important;
   padding-left: 0 !important;
-}
-
-.linha {
-  width: 100%;
-  height: 3.5px;
-  margin: auto;
-  margin-top: 110px;
-  margin-bottom: 65px;
-  border-radius: 4px;
-  background: var(--cor-em-modo-claro);
 }
 
 /*-----------------*/
@@ -313,7 +231,7 @@ section.home{
 
 .home h1 {
   font-size: 4rem !important;
-  color: var(--cor-em-modo-claro);
+  color: var(--text);
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -328,7 +246,7 @@ section.home{
 
 .home .info p {
   margin: 15px 0px;
-  color: var(--cor-em-modo-claro);
+  color: var(--text);
 }
 
 .home .registrar {
@@ -341,22 +259,21 @@ section.home{
 .home .registrar button {
   padding: 10px 35px;
   padding-left: 45px;
-  /*mais 15*/
   border-radius: 28px;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 1.5rem;
-  color: var(--cor-branca);
-  background: var(--cor-em-modo-claro);
+  color: var(--exception-text);
+  background: var(--exception-back);
   border: solid 2px transparent;
   transition: 0.2s ease-in;
 }
 
 .home .registrar button:hover {
-  color: var(--cor-em-modo-claro);
-  background: var(--cor-branca);
-  border-color: var(--cor-em-modo-claro);
+  color: var(--text);
+  background: var(--back);
+  border-color: var(--exception-back);
 }
 
 .home .bolaBotao {
@@ -364,12 +281,12 @@ section.home{
   border-radius: 10px;
   position: absolute;
   left: 14px;
-  background: var(--cor-branca);
+  background: var(--back);
   transition: 0.2s ease-in;
 }
 
 .home .registrar button:hover~.bolaBotao {
-  background: var(--cor-roxa);
+  background: var(--exception-back);
 }
 
 .home .imagemCont {
@@ -391,7 +308,7 @@ section.home{
   left: -32px;
   top: 80px;
   border-radius: 20px;
-  background: var(--cor-em-modo-claro);
+  background: var(--exception-back);
 }
 
 .bolinhaDireita {
@@ -401,7 +318,7 @@ section.home{
   right: -64px;
   top: 32px;
   border-radius: 20px;
-  background: var(--cor-em-modo-claro);
+  background: var(--exception-back);
 }
 
 .bolinhaMeio {
@@ -411,7 +328,7 @@ section.home{
   bottom: -48px;
   right: 576px;
   border-radius: 24px;
-  background: var(--cor-em-modo-claro);
+  background: var(--exception-back);
 }
 
 .bolaoDireita {
@@ -421,7 +338,7 @@ section.home{
   bottom: -128px;
   right: -240px;
   border-radius: 192px;
-  background: var(--cor-em-modo-claro);
+  background: var(--exception-back);
 }
 
 .bolaoEsquerda {
@@ -431,7 +348,7 @@ section.home{
   bottom: -304px;
   left: -240px;
   border-radius: 192px;
-  background: var(--cor-em-modo-claro);
+  background: var(--exception-back);
 }
 
 
@@ -442,7 +359,7 @@ section.team {
   justify-content: center;
   width: 100%;
   height: 90vh;
-  background-color: var(--cor-em-modo-claro);
+  background-color: var(--exception-back);
   overflow: hidden;
 }
 
@@ -480,7 +397,7 @@ section.team {
 }
 
 .team .container-item p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: justify;
 }
 
@@ -489,11 +406,10 @@ section.team {
 section.service {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 90vh;
-  /* background-color: #534f54; */
 }
 
 .service .container-service {
@@ -501,7 +417,7 @@ section.service {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 600px;
   height: 100%;
   margin-left: 50px;
 }
@@ -511,7 +427,7 @@ section.service {
   margin: 30px 0;
   font-size: 3rem;
   text-align: center;
-  color: var(--cor-roxa);
+  color: var(--text);
 }
 
 .service .container-service h2 {
@@ -519,41 +435,52 @@ section.service {
   margin: 30px 0;
   font-size: 2rem;
   text-align: center;
-  color: var(--cor-roxa);
+  color: var(--text);
 }
 
-.service .container-cards img {
+.service .container-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.service .container-cards svg {
   width: 5vw;
   margin: 0 20px;
   cursor: pointer;
 }
 
-.service .container-cards img:hover {
+.service .container-cards svg path{
+  fill: var(--exception-back);
+}
+
+.service .container-cards svg:hover {
   width: 6vw;
 }
 
-.service .container-cards img:nth-child(2) {
+.service .container-cards svg:nth-child(2) {
   width: 6vw;
 }
 
-.service .container-cards img:nth-child(2):hover {
+.service .container-cards svg:nth-child(2):hover {
   width: 7vw;
 }
 
-.fill {
+/* .fill {
   background-color: #31003B;
-}
+} */
 
 .service .container-service p {
-  width: 100%;
+  width: 80%;
   text-align: center;
-  font-size: 1.1rem;
-  color: var(--cor-roxa);
+  font-size: 1rem;
+  color: var(--text);
 }
 
 .service .imgDesc {
-  width: 40vw;
-  height: 20vw;
+  width: 400px;
+  /* height: 450px; */
   margin: 0 50px;
   border-radius: 5px;
 }
@@ -573,7 +500,7 @@ section.plan {
   width: 100%;
   font-size: 4rem;
   margin-top: 60px;
-  color: #8C52FF;
+  color: var(--text);
 }
 
 .plan .carousel {
@@ -610,7 +537,7 @@ section.plan {
   height: 26vw;
   width: 18vw;
   border-radius: 10px;
-  border: 1px solid var(--cor-em-modo-claro);
+  border: 1px solid var(--exception-back);
 }
 
 .plan .card-plan p {
@@ -619,15 +546,15 @@ section.plan {
   justify-content: center;
   width: 100%;
   margin: 0;
-  color: var(--cor-em-modo-claro);
-  border: 1.5px solid var(--cor-em-modo-claro);
+  color: var(--text);
+  border: 1.5px solid var(--exception-back);
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .plan .card-plan p:nth-child(3):hover {
-  background-color: var(--cor-em-modo-claro);
-  color: var(--cor-branca);
+  background-color: var(--exception-back);
+  color: var(--exception-text);
   cursor: pointer;
 }
 
@@ -662,7 +589,7 @@ footer {
 
 footer label {
   font-size: 1rem;
-  color: var(--cor-branca);
+  color: #FFFFFF;
   font-weight: bold;
   margin: 20px 0;
 }
@@ -718,7 +645,6 @@ footer label {
   transition-delay: 700ms;
 }
 
-
 /* -- Media Query HOME -- */
 
 @media (max-width: 1000px) {
@@ -727,7 +653,7 @@ footer label {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   .conteudo {
     display: flex;
     flex-direction: column;
@@ -755,7 +681,7 @@ footer label {
 
 
 /* -- Media Query TEAM -- */
-@media  (max-width: 800px) {
+@media  (max-width: 1000px) {
   .team .container-item {
     flex-direction: column;
     gap: 30px;
@@ -772,7 +698,7 @@ footer label {
 }
 
 /* -- Media Query SERVICE -- */
-@media  (max-width: 800px) {
+@media  (max-width: 1000px) {
   section.service {
     flex-direction: column;
   }
@@ -787,7 +713,7 @@ footer label {
 }
 
 /* -- Media Query PLAN -- */
-@media  (max-width: 700px) {
+@media  (max-width: 800px) {
   .plan h1 {
     text-align: center;
   }

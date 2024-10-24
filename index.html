@@ -3,46 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>PauloFreire.ai</title>
-  <!-- <link rel="shortcut icon" href="assets/img/Imgs_Logo/PauloFreireAI.ico" type="image/x-icon"> -->
+  <link rel="shortcut icon" href="assets/img/Imgs_Logo/PauloFreireAI.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- <link rel="stylesheet" href="style-celular.css"> -->
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color: var(--back);">
   
   <header>
     <nav id="navbar-fixed" class="navbar navbar-expand-lg" aria-label="Offcanvas navbar large">
       <div class="container-fluid">
-        <a class="navbar-brand logo" href="#">
-          <img src="assets/img/Imgs_Navbar/logoPaulo.svg">
+
+        <a class="navbar-brand logo" href="#home">
+          <img class="logoPaulo" src="assets/img/Imgs_Navbar/logoPaulo.svg">
         </a>  
-        <a class="navbar-brand" href="#" style="margin-top: 1%;"><p class="h3"><strong>PauloFreire.ai</strong></p></a>
+        <a class="navbar-brand" href="#home" style="margin-top: 1%;"><p class="h3"><strong>PauloFreire.ai</strong></p></a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
           <span></span>
           <span></span>
           <span></span>
         </button>
+
         <div  class="offcanvas offcanvas-end navbar-wrapper" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
           <div class="offcanvas-header">
           </div>
           <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 g-5 ">
                   <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link" href="#team">Sobre nós</a>
+                    <a class="nav-link" href="#team">Sobre nós</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#service">Serviços</a>
+                    <a class="nav-link" href="#service">Serviços</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#plan">Planos</a>
+                    <a class="nav-link" href="#plan">Planos</a>
                   </li>
                   <li class="nav-item">
-                      <button class="fazerLogin">FAZER LOGIN</button>
+                    <button class="fazerLogin" onclick="window.location.href = 'pages/login.html'">FAZER LOGIN</button>
                   </li>
                   <li class="nav-item">
                     <button id="theme-toggle">
@@ -52,9 +54,9 @@
               </ul>
           </div>
         </div>
+
       </div>
     </nav>
-    <!-- <div class="linha"></div> -->
   </header>
   
   <main>
@@ -66,16 +68,15 @@
       <section class="home hidden-scroll">
         <div class="conteudo">
           <div class="info">
-            <h1>Plataforma de <br>ensino<br> adaptado</h1>
+            <h1 class="darkmode">Plataforma de <br>ensino<br> adaptado</h1>
             <p>
               O projeto de TCC PauloFreire.ai é uma plataforma de ensino, estilo workspace, que visa auxiliar alunos que possuem defasagem no ensino e desejam concorrer a uma vaga em uma das ETECs ou FATECs.
             </p>
             <div class="registrar">
-              <button>Registre-se</button>
+              <button onclick="window.location.href = 'pages/cadastro.html'">Registre-se</button>
               <div class="bolaBotao"></div>
             </div>
           </div>
-          <!-- REFORMULAR BTN -->
           <div class="imagemCont">
             <img src="assets/img/Imgs_Home/Img_Workspace.png" alt="aa">
           </div>
@@ -87,14 +88,14 @@
 
       <!-- Section TEAM -->
       <section class="team hidden-scroll" id="team">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
           </div>
 
           <div class="carousel-inner">
@@ -184,12 +185,22 @@
       <section class="service hidden-scroll" id="service">
         <div class="container-service">
           <h1>Serviços</h1>
+
           <div class="container-cards">
-            <img src="assets/img/Imgs_Service/Img_Conteudo1.svg" onclick="setTextService(1)" id="content">
-            <img src="assets/img/Imgs_Service/Img_Chatbot1.svg" onclick="setTextService(2)" id="chatbot">
-            <img src="assets/img/Imgs_Service/Img_Agenda1.svg" onclick="setTextService(3)" id="agenda">
-            <img src="assets/img/Imgs_Service/Img_Simulado1.svg" onclick="setTextService(4)" id="simulated">
+            <svg onclick="setTextService(1)" id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#8C52FF" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/>
+            </svg>
+            <svg onclick="setTextService(2)" id="chatbot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+              <path fill="#8C52FF" d="M320 0c17.7 0 32 14.3 32 32l0 64 120 0c39.8 0 72 32.2 72 72l0 272c0 39.8-32.2 72-72 72l-304 0c-39.8 0-72-32.2-72-72l0-272c0-39.8 32.2-72 72-72l120 0 0-64c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224l16 0 0 192-16 0c-26.5 0-48-21.5-48-48l0-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-16 0 0-192 16 0z"/>
+            </svg>
+            <svg onclick="setTextService(3)" id="agenda" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="#8C52FF" d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/>
+            </svg>
+            <svg onclick="setTextService(4)" id="simulated" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#8C52FF" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
+            </svg>
           </div>
+
           <h2 id="labelService"></h2>
           <p id="textService"></p>
         </div>
@@ -202,9 +213,9 @@
     </div>
   </main>
   <!-- FOOTER -->
-  <footer class="hidden-scroll">
+  <footer>
     <div class="first-footer">
-      <img src="assets/img/Imgs_Logo/Img_Logo-roxo-claro.svg">
+      <img class="logoPaulo" src="assets/img/Imgs_Logo/Img_Logo-roxo-claro.svg">
       <label>PauloFreire.ai</label>
       <div>
         <img src="assets/img/Imgs_Team/Github.svg" onclick="window.location.href = 'https://github.com/Plataforma-de-Estudos'" style="width: 1.5vw; cursor: pointer;">

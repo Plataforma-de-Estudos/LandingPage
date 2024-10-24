@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
-  const logoIcon = document.querySelector('.navbar-brand img'); // Ajustado para selecionar a imagem da logo
+  const logoIcon = document.querySelectorAll('.logoPaulo'); // Ajustado para selecionar a imagem da logo
 
-  const darkThemeClass = 'dark-theme';
+  const darkThemeClass = 'darkmode';
   const darkIconSrc = 'assets/img/Imgs_Navbar/Sol.svg';
   const lightIconSrc = 'assets/img/Imgs_Navbar/Lua.svg'; // Corrigido para corresponder ao que está no HTML
   const paulaoEscuroSrc = 'assets/img/Imgs_Navbar/logoPauloDark.svg'; // Adicione a extensão do arquivo se for SVG
@@ -17,21 +17,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   themeToggle.addEventListener('click', function() {
-    document.body.classList.toggle(darkThemeClass);
     if (document.body.classList.contains(darkThemeClass)) {
-      themeIcon.src = darkIconSrc;
-      logoIcon.src = paulaoEscuroSrc;
-    } else {
       themeIcon.src = lightIconSrc;
-      logoIcon.src = paulaoClaroSrc;
+      logoIcon.forEach((e) => e.src = paulaoClaroSrc);
+    } else {
+      themeIcon.src = darkIconSrc;
+      logoIcon.forEach((e) => e.src = paulaoEscuroSrc);
     }
 
     // Alternar a classe dark-theme para os elementos especificados
-    document.querySelectorAll(
-      'header nav, .info p, .logo img, a, .info h1, .info h2, .h3, .fazerLogin, .registrar button, .bolaBotao, .bolinhaDireita, .bolinhaEsquerda, .bolaoDireita, .bolaoEsquerda, .bolinhaMeio, .nav-link, .offcanvas-body, .navbar-wrapper, .navbar-toggler'
-    ).forEach(element => {
-      element.classList.toggle(darkThemeClass);
+    // document.querySelector('html').classList.add(darkThemeClass);
+
+    document.querySelectorAll('html, h1, body').forEach((e) => {
+      if(e.classList.contains(darkThemeClass)) e.classList.remove(darkThemeClass);
+      else e.classList.add(darkThemeClass); 
+
+      // console.log(e.classList.contains(darkThemeClass));
     });
+
   });
 });
 
@@ -126,7 +129,7 @@ setTextService(2);
 function reloadPlans(width_screen){
   const plans = document.querySelector('.plan');
 
-  let quantCards = Math.ceil(width_screen/700);
+  let quantCards = Math.ceil(width_screen/800);
 
   if(quantCards<=1) {
     plans.innerHTML = `
