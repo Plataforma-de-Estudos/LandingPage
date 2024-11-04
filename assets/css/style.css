@@ -209,6 +209,7 @@ main {
 section.home{
   margin: 55px 0;
   overflow: hidden;
+  min-height: 50vw;
 }
 
 .home .conteudo {
@@ -336,7 +337,7 @@ section.home{
   height: 192px;
   position: absolute;
   bottom: -128px;
-  right: -240px;
+  right: -50%;
   border-radius: 192px;
   background: var(--exception-back);
 }

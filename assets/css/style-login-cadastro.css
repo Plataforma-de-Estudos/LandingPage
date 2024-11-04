@@ -14,6 +14,9 @@
     --text: #8C52FF;
     --exception-back: #8C52FF;
     --exception-text: #FFFFFF;
+
+    --michael-jackson: #FFFFFF;
+    --michael-jackson2: #8C52FF;
   }
   
   .darkmode:root {
@@ -21,6 +24,9 @@
     --text: #FFFFFF;
     --exception-back: #FFFFFF;
     --exception-text: #31003B;
+
+    --michael-jackson: #000000;
+    --michael-jackson2: #31003B;
   }
 
 .html {
@@ -51,6 +57,7 @@ nav {
 header h1 {
     font-size: 2.5rem;
     cursor: pointer;
+    color: #FFFFFF;
 }
 
 header img:nth-child(1) {
@@ -64,9 +71,10 @@ header img:nth-child(3) {
 }
 
 
+
 /* MAIN */
 body {
-    /* background-image: linear-gradient(45deg, black, var(--back)); */
+    background-image: linear-gradient(45deg, var(--michael-jackson), var(--michael-jackson2));
     background-color: var(--back);
 }
 
@@ -83,18 +91,19 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 25vw;
-    height: 30vw;
+    width: 300px;
+    height: 400px;
     background-color: var(--back);
     border: 3px solid var(--exception-back);
     border-radius: 10px;
+    overflow: hidden;
 }
 
 form h2 {
     margin: 10px 0;
     text-align: center;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 form label {
@@ -141,4 +150,25 @@ form a {
 
 form a:hover {
     font-weight: bold;
+}
+
+
+/* RESPONSIVIDADE */
+/* -- Media Query FONTS -- */
+@media  (max-width: 800px) {
+    html {
+      font-size: 10px;
+    }
+
+    header img:nth-child(1) {
+        width: 70px;
+        cursor: pointer;
+    }
+}
+
+@media  (max-width: 600px) {
+    form {
+        width: 400px;
+        height: 500px;
+    }
 }
